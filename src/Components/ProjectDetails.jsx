@@ -22,7 +22,6 @@ const ProjectDetails = ({ whiteMode }) => {
       <ScrollToTopOfPage />
       <Container whiteMode={whiteMode}>
         {/* particular project details */}
-        {/* introdetails part1 */}
         <section className="flex items-center justify-center">
           {specificList[0]?.introdetails?.map((d, i) => {
             return (

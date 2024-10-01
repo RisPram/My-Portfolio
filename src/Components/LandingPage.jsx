@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import {
-  personPhoto,
+  mypicture,
   homepageA,
   bgEffectA,
   homepageB,
   homepageC,
+  gg,
+  tcs,
 } from "../Assets";
 import Container from "../Common/Container";
 import { skills } from "../Common/RealData";
@@ -36,11 +38,11 @@ const LandingPage = ({ whiteMode }) => {
       <ScrollToTopOfPage />
       <Container
         whiteMode={whiteMode}
-        inner="my-20 items-center"
+        inner="mt-20 mb-8"
         style={{ backgroundImage: `url(${bgEffectA})` }}
       >
         <section
-          className={`grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-14 my-4`}
+          className={`grid grid-cols-1 lg:grid-cols-[60%_30%] gap-6 lg:gap-[10%]`}
         >
           <section className="flex flex-col items-start justify-center">
             <h2
@@ -54,66 +56,90 @@ const LandingPage = ({ whiteMode }) => {
               Frontend Developer (React JS) .
             </h4>
             <p
-              className={`py-5 text-4xl lg:text-5xl !leading-snug ${
+              className={`py-5 text-4xl lg:text-5xl !leading-snug font-caveat ${
                 whiteMode ? "text-black" : "text-[#fff]"
               } font-semibold`}
             >
-              Simplifying tough problems to make accessible solutions with
+              As a passionate frontend developer, I specialize in creating
+              visually appealing, user-friendly, and responsive web interfaces.
             </p>
-            <figure className="w-full lg:w-[80%] rounded-lg py-1 h-[100px] duration-200">
-              <img src={state?.image} alt="change" className="w-full h-full" />
-            </figure>
+
+            <section className="w-[80%] flex items-start justify-between py-10">
+              {skills?.map((d, i) => {
+                return (
+                  <figure key={i} className="w-[60px] h-[60px]">
+                    <img
+                      src={d?.image}
+                      alt="skills"
+                      className="object-contain w-full h-full"
+                    />
+                  </figure>
+                );
+              })}
+            </section>
           </section>
-          <figure className="w-full flex items-center justify-center lg:justify-end rounded-lg">
+          <figure className="w-full flex items-start justify-center rounded-2xl p-4">
             <img
-              src={personPhoto}
+              src={mypicture}
               alt="person"
-              className="object-contain w-[100%] h-full lg:h-[450px] rounded-lg"
+              className="object-cover w-full h-full rounded-3xl"
             />
           </figure>
         </section>
       </Container>
 
+      <Container whiteMode={whiteMode} inner="my-14">
+        <section
+          className={`py-5 flex items-center justify-center text-2xl tracking-wide  ${
+            whiteMode ? "text-black" : "text-[#fff]"
+          } font-semibold `}
+        >
+          <p
+            className={`flex items-center justify-center border-r-[1px]
+            ${
+              whiteMode
+                ? "text-black border-black"
+                : "text-[#fff] border-[#fff]"
+            }
+            `}
+          >
+            Currently @{" "}
+            <img
+              src={gg}
+              alt="gg"
+              className="object-contain rounded-lg h-[60px] mx-4"
+            />
+          </p>
+          <p
+            className={`flex items-center justify-center border-l-[1px] border-cyan-50  ${
+              whiteMode ? "border-black" : "border-[#fff]"
+            }`}
+          >
+            <span className="mx-4">Previously @</span>
+            <img
+              src={tcs}
+              alt="tcs"
+              className="object-contain rounded-lg h-[60px]"
+            />
+          </p>
+        </section>
+      </Container>
       {/* skills */}
-      <section className="relative flex overflow-x-hidden mx-auto">
-        <section
-          className={`py-14 lg:py-20 flex items-center justify-center animate-marquee whitespace-nowrap  ${
-            whiteMode ? "bg-whiteMode" : "bg-baseColor"
-          }`}
-        >
+      {/* <Container whiteMode={whiteMode} inner="my-20 items-center">
+        <section className="w-[80%] flex items-center justify-around py-10">
           {skills?.map((d, i) => {
             return (
-              <p
-                key={i}
-                className={`my-3 px-10 py-2 lg:py-3 mx-3 text-base lg:text-xl rounded-[30px] border-[1px] border-[#707070] ${
-                  whiteMode ? "text-black  hover:border-none" : "text-[#fff]"
-                } font-semibold cursor-pointer hover:bg-babyGreen hover:rounded-xl hover:-rotate-[10deg] hover:text-black duration-300`}
-              >
-                {d?.name}
-              </p>
+              <figure key={i} className="w-[80px] h-[80px]">
+                <img
+                  src={d?.image}
+                  alt="skills"
+                  className="object-contain w-full h-full"
+                />
+              </figure>
             );
           })}
         </section>
-        <section
-          className={`py-14 lg:py-20 border-none absolute top-0 flex items-center justify-center ${
-            whiteMode ? "bg-whiteMode" : "bg-baseColor"
-          } animate-marquee2 whitespace-nowrap`}
-        >
-          {skills?.map((d, i) => {
-            return (
-              <p
-                key={i}
-                className={`my-3 px-10 py-2 lg:py-3 mx-3 text-base lg:text-xl rounded-[30px] border-[1px] border-[#707070] ${
-                  whiteMode ? "text-black  hover:border-none" : "text-[#fff]"
-                } font-semibold cursor-pointer
-              hover:bg-babyGreen hover:rounded-xl hover:-rotate-[10deg] hover:text-black duration-300`}
-              >
-                {d?.name}
-              </p>
-            );
-          })}
-        </section>
-      </section>
+      </Container> */}
 
       {/* my project */}
       <MyProject whiteMode={whiteMode} />

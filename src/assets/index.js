@@ -13,18 +13,18 @@ import myProject4 from "./images/myProject4.png";
 import iconLink from "./images/iconLink.png";
 import linkedIn from "./images/linkedin.png";
 import twitter from "./images/twitter.png";
-//side business images
-import bsideA from "./images/Bside/bsideA.png";
-import bsideB from "./images/Bside/bsideB.png";
-import bsideC from "./images/Bside/bsideC.png";
-import bsideD from "./images/Bside/bsideD.png";
-import bsideE from "./images/Bside/bsideE.png";
+//myproject images
+import cashaqua from "./images/ProjectDetails/cashaqua.png";
+import franchiselanding from "./images/ProjectDetails/franchiselanding.png";
+import franchiseStore from "./images/ProjectDetails/franchiseStore.png";
+import loan from "./images/ProjectDetails/loan.png";
+import offerzone from "./images/ProjectDetails/offerzone.png";
 
 //project-details
-import pImg from "./images/ProductDetails/problemImage.png";
+import pImg from "./images/ProjectDetails/problemImage.png";
 
 //homepage about me
-import personPhoto from "./images/AboutMe/personPhoto.jpg";
+import mypicture from "./images/AboutMe/mypic.png";
 import homepageA from "./images/AboutMe/homepageA.png";
 import homepageB from "./images/AboutMe/UXandProductDesign.png";
 import homepageC from "./images/AboutMe/ResearchandDevelopment.png";
@@ -33,7 +33,37 @@ import bgEffectA from "./images/AboutMe/bgEffect.png";
 // resume
 import resume from "../Assets/samplepdf.pdf";
 
+// skills
+import html from "./images/Skills/html5.svg";
+import css from "./images/Skills/css.svg";
+import js from "./images/Skills/javascript.svg";
+import sass from "./images/Skills/sass.svg";
+import tailwind from "./images/Skills/tailwindcss.svg";
+import reactjs from "./images/Skills/reactjs.svg";
+import redux from "./images/Skills/Redux.png";
+import git from "./images/Skills/git.png";
+
+// company
+import gg from "./images/AboutMe/gg.png";
+import tcs from "./images/AboutMe/tcs.png";
+
 export {
+  franchiseStore,
+  franchiselanding,
+  cashaqua,
+  offerzone,
+  loan,
+  mypicture,
+  gg,
+  tcs,
+  html,
+  css,
+  js,
+  sass,
+  tailwind,
+  reactjs,
+  redux,
+  git,
   day,
   night,
   hamburger,
@@ -49,7 +79,6 @@ export {
   linkedIn,
   twitter,
   pImg,
-  personPhoto,
   bsideA,
   bsideB,
   bsideC,

@@ -1,4 +1,4 @@
-import { personPhoto } from "../Assets";
+import { mypicture } from "../Assets";
 import Container from "../Common/Container";
 import { socialMedia } from "../Common/RealData";
 import ScrollToTopOfPage from "../Common/ScrollToTopOfPage";
@@ -11,7 +11,7 @@ const AboutMe = ({ whiteMode }) => {
         <section className="grid grid-cols-1 xl:grid-cols-2 gap-14 w-full">
           <figure className="w-full  h-[400px] xl:h-full rounded-lg flex items-start justify-start">
             <img
-              src={personPhoto}
+              src={mypicture}
               alt="person"
               className="object-contain w-full h-full"
             />

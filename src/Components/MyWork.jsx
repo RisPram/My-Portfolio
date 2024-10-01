@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { iconLink } from "../Assets";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { businessImages, myProject } from "../Common/RealData";
 import Container from "../Common/Container";
 const MyProject = ({ whiteMode }) => {
@@ -39,15 +39,26 @@ const MyProject = ({ whiteMode }) => {
 
               {state.selectedData?.id === d?.id &&
                 state.selectedData?.heading && (
-                  <p className="rounded-xl bg-gradient-to-t from-black to-transparent duration-500 px-4 absolute flex flex-col bottom-0 w-full py-4 font-bold">
-                    <span className="py-1 text-sm lg:text-xl bg-gradient-to-r from-pink-500  to-orange-300 bg-clip-text text-transparent">
-                      {d?.heading}
-                    </span>
+                  <>
+                    <p className="absolute bottom-0 w-full flex flex-col rounded-xl bg-gradient-to-t from-black to-transparent duration-500 p-4 font-bold">
+                      <span className="py-1 text-sm lg:text-xl bg-gradient-to-r from-pink-500 to-orange-300 bg-clip-text text-transparent">
+                        {d?.heading}
+                      </span>
 
-                    <span className="py-1 text-xl lg:text-2xl text-[#fff]">
-                      {d?.subHeading}
-                    </span>
-                  </p>
+                      <span className="py-1 text-xl lg:text-2xl text-[#fff]">
+                        {d?.subHeading}
+                      </span>
+                    </p>
+                    <p
+                      className="absolute top-3 right-5 w-fit bg-babyGreen rounded-full p-1.5 cursor-pointer"
+                      onClick={() => {
+                        navigate();
+                      }}
+                    >
+                      <ArrowForwardIcon />
+                      {/* <img src={iconLink} alt="link" className="ml-2 w-8 h-8" /> */}
+                    </p>
+                  </>
                 )}
             </figure>
           );

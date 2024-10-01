@@ -37,13 +37,10 @@ const Header = ({ handleModeChange }) => {
     setTimeout(() => {
       data?.id !== "menuD"
         ? navigate(`${data?.link}`)
-        : window.open(
-            data?.download,
-            "_blank",
-            "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes"
-          );
+        : window.open(data?.download, "_blank", "fullscreen=yes");
     }, 200);
   };
+
   return (
     <Container segment="header" whiteMode={state?.mode} inner="my-4">
       <nav className="flex w-full h-full">

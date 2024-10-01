@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         libre: ['"Libre Baskerville"', "serif"],
+        caveat: ["Caveat", "cursive"],
       },
       colors: {
         baseColor: "#010d26",
