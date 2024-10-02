@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { day, night, hamburger, rplogo } from "../Assets/Assets";
 import { Close } from "@mui/icons-material";
 import Container from "./Container";
 import { menu } from "./RealData";
-import { rplogo, day, night, hamburger } from "../Assets/Assets";
 const Header = ({ handleModeChange }) => {
   const navigate = useNavigate();
 
