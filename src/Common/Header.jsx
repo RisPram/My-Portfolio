@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Close } from "@mui/icons-material";
 import Container from "./Container";
 import { menu } from "./RealData";
-import { rplogo, day, night, hamburger } from "../Assets";
+import { rplogo, day, night, hamburger } from "../Assets/index";
 const Header = ({ handleModeChange }) => {
   const navigate = useNavigate();
 
