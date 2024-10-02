@@ -62,16 +62,16 @@ const ProjectDetails = ({ whiteMode }) => {
                   </div>
                 </section>
 
-                <section className="w-full flex py-2 items-start justify-evenly flex-wrap">
+                <section className="w-full flex py-4 items-start justify-between flex-wrap">
                   {d?.skills?.map((d, i) => {
                     return (
                       <p
                         key={i}
-                        className={`p-2 my-1 w-max rounded-[33px] border-[1px] flex items-center justify-center
+                        className={`px-2 py-1 my-1 w-max rounded-[33px] border-[1px] flex items-center justify-center
                         ${
                           whiteMode
-                            ? "text-[#101010] border-black"
-                            : "text-[#fff] border-[#fff]"
+                            ? "text-[#fff] border-black bg-gray-700"
+                            : "text-[#101010] border-[#fff] bg-gray-100"
                         }
                         `}
                       >
@@ -82,7 +82,7 @@ const ProjectDetails = ({ whiteMode }) => {
                             className="object-contain w-full h-full"
                           />
                         </figure>
-                        <span className="px-2 font-caveat text-lg">
+                        <span className="px-2 font-caveat text-lg font-semibold">
                           {d?.name}
                         </span>
                       </p>

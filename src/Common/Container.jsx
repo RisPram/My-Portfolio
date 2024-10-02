@@ -27,7 +27,7 @@ const Container = ({ whiteMode, outer, inner, children, segment, style }) => {
           : whiteMode
           ? "bg-whiteMode"
           : "bg-baseColor backdrop-blur-none"
-      }duration-300 `}
+      } duration-300 `}
       style={style}
     >
       <section

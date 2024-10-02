@@ -32,11 +32,7 @@ export const menu = [
     title: "About",
     link: "/about",
   },
-  {
-    id: "menuC",
-    title: "B-Side",
-    link: "/business",
-  },
+
   {
     id: "menuD",
     title: "Resume",

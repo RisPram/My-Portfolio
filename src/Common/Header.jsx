@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Menu, Close } from "@mui/icons-material";
+import { Close } from "@mui/icons-material";
 import Container from "./Container";
 import { menu } from "./RealData";
-import { rplogo, whiteMode, darkMode, day, night, hamburger } from "../Assets";
+import { rplogo, day, night, hamburger } from "../Assets";
 const Header = ({ handleModeChange }) => {
   const navigate = useNavigate();
 
@@ -55,7 +55,7 @@ const Header = ({ handleModeChange }) => {
           />
         </figure>
         {/* above 768px-md */}
-        <section className="w-[90%] hidden md:flex justify-end">
+        <section className="w-[90%] hidden md:flex justify-center xl:justify-end">
           <section className="w-fit bg-[#3a3939]/40 p-2 rounded-[30px] backdrop-blur-sm flex items-center justify-end">
             {menu?.map((d, i) => {
               return (
@@ -75,7 +75,7 @@ const Header = ({ handleModeChange }) => {
               );
             })}
           </section>
-          <figure className="ml-2 w-[5%] flex items-center justify-center">
+          <figure className="ml-2 w-[10%] xl:w-[5%] flex items-center justify-center">
             <img
               src={state?.mode ? day : night}
               alt="mode"
@@ -104,13 +104,7 @@ const Header = ({ handleModeChange }) => {
             }}
           >
             <span className="cursor-pointer relative">
-              {state.openMenu ? (
-                <Close
-                  className={`!h-8 !w-8 ${
-                    state.mode ? "text-baseColor" : "text-whiteMode"
-                  }`}
-                />
-              ) : (
+              {!state.openMenu && (
                 <img
                   src={hamburger}
                   alt="mode"
@@ -118,11 +112,6 @@ const Header = ({ handleModeChange }) => {
                     !state?.mode ? "bg-white" : "bg-transparent"
                   } rounded-full p-1.5`}
                 />
-                // <Menu
-                //   className={`!h-10 !w-10 ${
-                //     state.mode ? "text-baseColor" : "text-whiteMode"
-                //   }`}
-                // />
               )}
             </span>
 
@@ -130,8 +119,15 @@ const Header = ({ handleModeChange }) => {
               <div
                 className={`${
                   state.mode ? "bg-gray-300" : "bg-baseColor"
-                }  z-50 w-[90vw] h-[250px] rounded-md py-2 px-1 absolute top-12 right-0 flex flex-col menu-animate-slide-topBottom items-center justify-center`}
+                }  z-50 w-[90vw] h-[275px] rounded-md py-2 px-1 absolute -top-7 right-0 flex flex-col menu-animate-slide-topBottom items-center justify-center`}
               >
+                <p className="flex items-end justify-end w-full py-2">
+                  <Close
+                    className={`!h-8 !w-8 ${
+                      state.mode ? "text-baseColor" : "text-whiteMode"
+                    }`}
+                  />
+                </p>
                 {menu?.map((d, i) => {
                   return (
                     <p
