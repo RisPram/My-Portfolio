@@ -2,6 +2,7 @@ import { useRoutes } from "react-router-dom";
 import LandingPage from "./Components/LandingPage";
 import ProjectDetails from "./Components/ProjectDetails";
 import AboutMe from "./Components/AboutMe";
+import Contact from "./Components/Contact";
 
 const AllRoutes = ({ whiteMode }) => {
   // console.log("in routes>", whiteMode);
@@ -19,6 +20,10 @@ const AllRoutes = ({ whiteMode }) => {
       element: <AboutMe whiteMode={whiteMode} />,
     },
 
+    {
+      path: "/contact",
+      element: <Contact whiteMode={whiteMode} />,
+    },
     // {
     //   path: "*",
     //   element: <PageNotFound />,

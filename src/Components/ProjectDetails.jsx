@@ -62,50 +62,49 @@ const ProjectDetails = ({ whiteMode }) => {
                   </div>
                 </section>
 
-                <section className="w-full flex py-4 items-start justify-between flex-wrap">
-                  {d?.skills?.map((d, i) => {
-                    return (
-                      <p
-                        key={i}
-                        className={`px-2 py-1 my-1 w-max rounded-[33px] border-[1px] flex items-center justify-center
-                        ${
-                          whiteMode
-                            ? "text-[#fff] border-black bg-gray-700"
-                            : "text-[#101010] border-[#fff] bg-gray-100"
-                        }
-                        `}
-                      >
-                        <figure key={i} className="w-[30px] h-[30px]">
-                          <img
-                            src={d?.image}
-                            alt="skills"
-                            className="object-contain w-full h-full"
-                          />
-                        </figure>
-                        <span className="px-2 font-caveat text-lg font-semibold">
-                          {d?.name}
-                        </span>
-                      </p>
-                    );
-                  })}
-                </section>
                 <section
-                  className="py-2 text-lg text-left lg:text-justify bg-cover bg-center"
+                  className="w-full flex flex-col my-10"
                   style={{ backgroundImage: `url(${bgEffectA})` }}
                 >
-                  {d?.details?.map((x, i) => {
-                    return (
-                      <p
-                        className={`py-2 font-normal  ${
-                          whiteMode ? "text-[#101010]" : "text-[#fff]"
-                        }`}
-                        key={i}
-                        dangerouslySetInnerHTML={{
-                          __html: x,
-                        }}
-                      ></p>
-                    );
-                  })}
+                  <section className="mt-2 w-full flex py-4 items-start justify-start flex-wrap">
+                    {d?.skills?.map((d, i) => {
+                      return (
+                        <p
+                          key={i}
+                          className={`px-2 py-1 my-1 mr-2 w-max rounded-[33px] border-[1px] flex items-center justify-center
+                        border-gray-700
+                            ${whiteMode ? "text-black" : "text-[#fff]"}
+                        `}
+                        >
+                          <figure key={i} className="w-[30px] h-[30px]">
+                            <img
+                              src={d?.image}
+                              alt="skills"
+                              className="object-contain w-full h-full"
+                            />
+                          </figure>
+                          <span className="px-2 font-caveat text-lg font-semibold">
+                            {d?.name}
+                          </span>
+                        </p>
+                      );
+                    })}
+                  </section>
+                  <section className="py-2 text-lg text-left lg:text-justify bg-cover bg-center">
+                    {d?.details?.map((x, i) => {
+                      return (
+                        <p
+                          className={`py-2 font-normal  ${
+                            whiteMode ? "text-[#101010]" : "text-[#fff]"
+                          }`}
+                          key={i}
+                          dangerouslySetInnerHTML={{
+                            __html: x,
+                          }}
+                        ></p>
+                      );
+                    })}
+                  </section>
                 </section>
               </section>
             );

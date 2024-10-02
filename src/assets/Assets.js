@@ -47,8 +47,9 @@ import nextjs from "./images/Skills/nextjs.webp";
 // company
 import gg from "./images/AboutMe/gg.png";
 import tcs from "./images/AboutMe/tcs.png";
-
+import send from "./images/AboutMe/send.png";
 export {
+  send,
   franchiseStore,
   franchiselanding,
   cashaqua,

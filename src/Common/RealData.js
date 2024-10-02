@@ -1,9 +1,6 @@
 import {
-  myProject1,
-  myProject2,
   linkedIn,
   twitter,
-  pImg,
   resume,
   html,
   css,
@@ -31,6 +28,11 @@ export const menu = [
     id: "menuB",
     title: "About",
     link: "/about",
+  },
+  {
+    id: "menuC",
+    title: "Contact",
+    link: "/contact",
   },
 
   {
