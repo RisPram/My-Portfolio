@@ -20,7 +20,7 @@ import {
   cashaqua,
   offerzone,
   loan,
-} from "../Assets";
+} from "../Assets/Assets";
 export const menu = [
   {
     id: "menuA",

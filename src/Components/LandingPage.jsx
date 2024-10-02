@@ -7,7 +7,7 @@ import {
   homepageC,
   gg,
   tcs,
-} from "../Assets";
+} from "../Assets/Assets";
 import Container from "../Common/Container";
 import { skills } from "../Common/RealData";
 import ScrollToTopOfPage from "../Common/ScrollToTopOfPage";
