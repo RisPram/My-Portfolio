@@ -42,7 +42,8 @@ import tailwind from "./images/Skills/tailwindcss.svg";
 import reactjs from "./images/Skills/reactjs.svg";
 import redux from "./images/Skills/Redux.png";
 import git from "./images/Skills/git.png";
-
+import bootstrap from "./images/Skills/bootstrap.png";
+import nextjs from "./images/Skills/nextjs.webp";
 // company
 import gg from "./images/AboutMe/gg.png";
 import tcs from "./images/AboutMe/tcs.png";
@@ -59,9 +60,11 @@ export {
   html,
   css,
   js,
+  bootstrap,
   sass,
   tailwind,
   reactjs,
+  nextjs,
   redux,
   git,
   day,
@@ -79,11 +82,6 @@ export {
   linkedIn,
   twitter,
   pImg,
-  bsideA,
-  bsideB,
-  bsideC,
-  bsideD,
-  bsideE,
   homepageA,
   homepageB,
   homepageC,

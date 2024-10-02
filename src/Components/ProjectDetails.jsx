@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { iconLink } from "../Assets";
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+import { iconLink, bgEffectA } from "../Assets";
 import Container from "../Common/Container";
-import { myProject, projectDetails } from "../Common/RealData";
+import { myProject, skills } from "../Common/RealData";
 import ScrollToTopOfPage from "../Common/ScrollToTopOfPage";
 
 const ProjectDetails = ({ whiteMode }) => {
@@ -10,20 +11,21 @@ const ProjectDetails = ({ whiteMode }) => {
   const navigate = useNavigate();
 
   const [state, setState] = useState({ selectedTab: "" });
-  let specificList = projectDetails?.filter((d) => {
-    return d?.type === params.key;
+  let specificProject = myProject?.filter((d) => {
+    return d?.slug === params.key;
   });
 
   let moreProjects = myProject?.filter((d) => {
     return d?.slug !== params.key;
   });
+
   return (
     <>
       <ScrollToTopOfPage />
       <Container whiteMode={whiteMode}>
         {/* particular project details */}
         <section className="flex items-center justify-center">
-          {specificList[0]?.introdetails?.map((d, i) => {
+          {specificProject?.map((d, i) => {
             return (
               <section
                 className="my-10 w-[90%] lg:w-[70%] flex flex-col items-center justify-center"
@@ -35,19 +37,18 @@ const ProjectDetails = ({ whiteMode }) => {
                     className="object-fill w-full h-full rounded-lg"
                   />
                 </figure>
-                <section className="w-full flex ">
+                <section className="w-full flex">
                   <h3
                     className={`w-[80%] py-6 !text-3xl lg:!text-4xl font-bold ${
                       whiteMode ? "text-[#101010]" : "text-[#fff]"
                     }`}
                   >
-                    {d?.title}
+                    {d?.name}
                   </h3>
-                  <p className={`w-[20%] flex items-center justify-center`}>
+                  <div className={`w-[20%] flex items-center justify-end`}>
                     <p
-                      className={`flex py-2 px-7 text-xl cursor-pointer group  ${
-                        whiteMode ? "text-black" : "text-[#D1D1D1]"
-                      } hover:bg-babyGreen rounded-lg`}
+                      className={`flex py-1.5 px-7 font-caveat text-lg cursor-pointer group  bg-blue-400 rounded-lg duration-200 hover:bg-blue-500
+                        ${whiteMode ? "text-[#101010]" : "text-[#fff]"}`}
                       onClick={() => {
                         window.open();
                       }}
@@ -55,9 +56,56 @@ const ProjectDetails = ({ whiteMode }) => {
                       <span className="group-hover:underline font-semibold">
                         Visit Site
                       </span>
-                      <img src={iconLink} alt="link" className="ml-2 w-8 h-8" />
+                      <ArrowOutwardIcon className="w-4 h-4 ml-2" />
+                      {/* <img src={iconLink} alt="link" className="ml-2 w-8 h-8" /> */}
                     </p>
-                  </p>
+                  </div>
+                </section>
+
+                <section className="w-full flex py-2 items-start justify-evenly flex-wrap">
+                  {d?.skills?.map((d, i) => {
+                    return (
+                      <p
+                        key={i}
+                        className={`p-2 my-1 w-max rounded-[33px] border-[1px] flex items-center justify-center
+                        ${
+                          whiteMode
+                            ? "text-[#101010] border-black"
+                            : "text-[#fff] border-[#fff]"
+                        }
+                        `}
+                      >
+                        <figure key={i} className="w-[30px] h-[30px]">
+                          <img
+                            src={d?.image}
+                            alt="skills"
+                            className="object-contain w-full h-full"
+                          />
+                        </figure>
+                        <span className="px-2 font-caveat text-lg">
+                          {d?.name}
+                        </span>
+                      </p>
+                    );
+                  })}
+                </section>
+                <section
+                  className="py-2 text-lg text-left lg:text-justify bg-cover bg-center"
+                  style={{ backgroundImage: `url(${bgEffectA})` }}
+                >
+                  {d?.details?.map((x, i) => {
+                    return (
+                      <p
+                        className={`py-2 font-normal  ${
+                          whiteMode ? "text-[#101010]" : "text-[#fff]"
+                        }`}
+                        key={i}
+                        dangerouslySetInnerHTML={{
+                          __html: x,
+                        }}
+                      ></p>
+                    );
+                  })}
                 </section>
               </section>
             );
@@ -68,7 +116,7 @@ const ProjectDetails = ({ whiteMode }) => {
         <h2
           className={`font-semibold ${
             whiteMode ? "text-[#101010]" : "text-[#fff]"
-          } !text-5xl my-20 pt-10`}
+          } !text-5xl my-16 pt-10`}
         >
           More to explore
         </h2>
@@ -78,22 +126,22 @@ const ProjectDetails = ({ whiteMode }) => {
               <section className="flex flex-col items-start" key={i}>
                 <figure className={``}>
                   <img
-                    src={d?.img}
+                    src={d?.image}
                     alt="project"
                     className="object-contain w-full h-[300px]"
                   />
                 </figure>
-                <p className="py-3 !text-[#707070] text-xl">{d?.type}</p>
+                <p className="py-1.5 !text-[#707070] text-lg">{d?.dec}</p>
                 <h3
-                  className={`py-3 font-bold ${
+                  className={`py-1.5 font-bold text-caveat ${
                     whiteMode ? "text-[#101010]" : "text-[#fff]"
-                  } !text-5xl`}
+                  } !text-xl`}
                 >
-                  {d?.title}
+                  {d?.name}
                 </h3>
 
                 <p
-                  className="py-3 flex items-start justify-center text-xl cursor-pointer group"
+                  className="py-1.5 flex items-start justify-center text-xl cursor-pointer group"
                   onClick={() => {
                     window.scroll({ top: 0, left: 0, behavior: "smooth" });
                     navigate(`/project-details/${d?.slug}`);

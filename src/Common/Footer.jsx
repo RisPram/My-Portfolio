@@ -12,9 +12,10 @@ const Footer = ({ whiteMode }) => {
     <>
       <Container
         whiteMode={whiteMode}
-        outer={`${
-          whiteMode ? "bg-[#fff]" : "bg-[#101010]"
-        } border-t-[1px] border-[#989898`}
+        outer={`${whiteMode ? "bg-[#fff]" : "bg-[#101010]"}`}
+        // outer={`${
+        //   whiteMode ? "bg-[#fff]" : "bg-[#101010]"
+        // } border-t-[1px] border-[#989898]`}
         inner="my-14"
       >
         <section className="flex flex-col items-center justify-center">
@@ -25,7 +26,7 @@ const Footer = ({ whiteMode }) => {
             <a
               href={`mailto: rishita.pramanick15@gmail.com`}
               data-rel="external"
-              className={`no-underline font-semibold ml-2 text-2xl md:text-4xl ${
+              className={`no-underline font-semibold ml-2 text-xl md:text-4xl ${
                 whiteMode ? "text-black" : "text-[#fff]"
               }`}
             >
@@ -48,7 +49,7 @@ const Footer = ({ whiteMode }) => {
             })}
           </div>
           <p
-            className={`text-center text-xl pt-8 pb-2 ${
+            className={`text-center text-base md:text-xl pt-8 pb-2 ${
               whiteMode ? "text-black" : "text-[#707070]"
             }`}
           >
@@ -62,7 +63,7 @@ const Footer = ({ whiteMode }) => {
         outer={`${whiteMode ? "bg-[#fff]" : "bg-[#101010]"}`}
       >
         <section
-          className={`flex flex-col md:flex-row md:justify-between items-center md:items-start text-lg md:text-xl py-4
+          className={`flex flex-col md:flex-row md:justify-between items-center md:items-start text-sm md:text-xl py-4
            ${whiteMode ? "text-[#707070]" : "text-[#C1C1C1] "}
             `}
         >

@@ -42,7 +42,7 @@ const LandingPage = ({ whiteMode }) => {
         style={{ backgroundImage: `url(${bgEffectA})` }}
       >
         <section
-          className={`grid grid-cols-1 lg:grid-cols-[60%_30%] gap-6 lg:gap-[10%]`}
+          className={`grid grid-cols-1 xl:grid-cols-[60%_30%] gap-6 xl:gap-[10%]`}
         >
           <section className="flex flex-col items-start justify-center">
             <h2
@@ -64,10 +64,10 @@ const LandingPage = ({ whiteMode }) => {
               visually appealing, user-friendly, and responsive web interfaces.
             </p>
 
-            <section className="w-[80%] flex items-start justify-between py-10">
+            <section className="w-[100%] flex items-center justify-center sm:justify-between py-8 flex-wrap ">
               {skills?.map((d, i) => {
                 return (
-                  <figure key={i} className="w-[60px] h-[60px]">
+                  <figure key={i} className="w-[60px] h-[60px] my-2">
                     <img
                       src={d?.image}
                       alt="skills"
@@ -78,11 +78,11 @@ const LandingPage = ({ whiteMode }) => {
               })}
             </section>
           </section>
-          <figure className="w-full flex items-start justify-center rounded-2xl p-4">
+          <figure className=" w-full h-full flex items-center lg:items-start justify-center rounded-2xl p-4">
             <img
               src={mypicture}
               alt="person"
-              className="object-cover w-full h-full rounded-3xl"
+              className="object-cover w-[75%] h-[75%] xl:w-full rounded-3xl"
             />
           </figure>
         </section>
@@ -90,12 +90,12 @@ const LandingPage = ({ whiteMode }) => {
 
       <Container whiteMode={whiteMode} inner="my-14">
         <section
-          className={`py-5 flex items-center justify-center text-2xl tracking-wide  ${
+          className={`py-5 flex flex-col md:flex-row items-center justify-center text-lg lg:text-2xl tracking-wide  ${
             whiteMode ? "text-black" : "text-[#fff]"
           } font-semibold `}
         >
           <p
-            className={`flex items-center justify-center border-r-[1px]
+            className={`flex items-center justify-center border-r-none lg:border-r-[1px]
             ${
               whiteMode
                 ? "text-black border-black"
@@ -111,7 +111,7 @@ const LandingPage = ({ whiteMode }) => {
             />
           </p>
           <p
-            className={`flex items-center justify-center border-l-[1px] border-cyan-50  ${
+            className={`flex items-center justify-center border-l-none lg:border-l-[1px] border-cyan-50  ${
               whiteMode ? "border-black" : "border-[#fff]"
             }`}
           >

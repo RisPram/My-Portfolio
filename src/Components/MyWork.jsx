@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { businessImages, myProject } from "../Common/RealData";
+import { myProject } from "../Common/RealData";
 import Container from "../Common/Container";
 const MyProject = ({ whiteMode }) => {
   const navigate = useNavigate();
@@ -10,8 +10,15 @@ const MyProject = ({ whiteMode }) => {
   });
   return (
     <Container whiteMode={whiteMode} inner="pb-20">
+      <h2
+        className={`my-14 text-left font-semibold !text-3xl lg:!text-5xl   ${
+          whiteMode ? "text-black " : "text-[#fff]"
+        } underline`}
+      >
+        My Contributions
+      </h2>
       <section className={`grid grid-cols-1 lg:grid-cols-2 mb-14 gap-14`}>
-        {businessImages?.map((d, i) => {
+        {myProject?.map((d, i) => {
           return (
             <figure
               className={`cursor-pointer relative w-full rounded-xl`}
@@ -31,35 +38,31 @@ const MyProject = ({ whiteMode }) => {
                 src={d?.image}
                 alt="pic"
                 className={`${
-                  state.selectedData?.id === d?.id && d?.heading
-                    ? "opacity-70"
-                    : ""
-                } object-contain w-full h-full rounded-xl`}
+                  state.selectedData?.id === d?.id ? "opacity-70" : ""
+                } object-contain w-full h-full rounded-lg`}
               />
 
-              {state.selectedData?.id === d?.id &&
-                state.selectedData?.heading && (
-                  <>
-                    <p className="absolute bottom-0 w-full flex flex-col rounded-xl bg-gradient-to-t from-black to-transparent duration-500 p-4 font-bold">
-                      <span className="py-1 text-sm lg:text-xl bg-gradient-to-r from-pink-500 to-orange-300 bg-clip-text text-transparent">
-                        {d?.heading}
-                      </span>
+              {state.selectedData?.id === d?.id && (
+                <>
+                  <p className="absolute bottom-0 w-full flex flex-col rounded-xl bg-gradient-to-t from-black to-transparent duration-500 p-4 font-bold">
+                    <span className="py-1 text-sm lg:text-xl bg-gradient-to-r from-cyan-500 to-pink-700 bg-clip-text text-transparent">
+                      {d?.name}
+                    </span>
 
-                      <span className="py-1 text-xl lg:text-2xl text-[#fff]">
-                        {d?.subHeading}
-                      </span>
-                    </p>
-                    <p
-                      className="absolute top-3 right-5 w-fit bg-babyGreen rounded-full p-1.5 cursor-pointer"
-                      onClick={() => {
-                        navigate();
-                      }}
-                    >
-                      <ArrowForwardIcon />
-                      {/* <img src={iconLink} alt="link" className="ml-2 w-8 h-8" /> */}
-                    </p>
-                  </>
-                )}
+                    <span className="py-1 text-xl text-[#fff]">{d?.dec}</span>
+                    <span className="py-1 text-xl text-[#fff]">{d?.date}</span>
+                  </p>
+                  <p
+                    className="absolute top-3 right-5 w-fit bg-babyGreen rounded-full p-1.5 cursor-pointer"
+                    onClick={() => {
+                      navigate(`/project-details/${d?.slug}`);
+                    }}
+                  >
+                    <ArrowForwardIcon />
+                    {/* <img src={iconLink} alt="link" className="ml-2 w-8 h-8" /> */}
+                  </p>
+                </>
+              )}
             </figure>
           );
         })}
