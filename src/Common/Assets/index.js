@@ -18,7 +18,7 @@ import franchiselanding from "./images/ProjectDetails/franchiselanding.png";
 import franchiseStore from "./images/ProjectDetails/franchiseStore.png";
 import loan from "./images/ProjectDetails/loan.png";
 import offerzone from "./images/ProjectDetails/offerzone.png";
-
+import career from "./images/ProjectDetails/career.png";
 //project-details
 import pImg from "./images/ProjectDetails/problemImage.png";
 
@@ -87,4 +87,5 @@ export {
   homepageC,
   bgEffectA,
   resume,
+  career,
 };

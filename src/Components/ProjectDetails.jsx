@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
-import { iconLink, bgEffectA } from "../Common/Assets";
+import { ArrowOutward, ArrowForward } from "@mui/icons-material";
+import { bgEffectA } from "../Common/Assets";
 import Container from "../Common/Container";
 import { myProject } from "../Common/RealData";
 import ScrollToTopOfPage from "../Common/ScrollToTopOfPage";
@@ -50,13 +50,17 @@ const ProjectDetails = ({ whiteMode }) => {
                       className={`flex py-1.5 px-7 font-caveat text-lg cursor-pointer group  bg-blue-400 rounded-lg duration-200 hover:bg-blue-500
                         ${whiteMode ? "text-[#101010]" : "text-[#fff]"}`}
                       onClick={() => {
-                        window.open();
+                        window.open(
+                          `${d?.liveLink}`,
+                          "_blank",
+                          "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes"
+                        );
                       }}
                     >
                       <span className="group-hover:underline font-semibold">
                         Visit Site
                       </span>
-                      <ArrowOutwardIcon className="w-4 h-4 ml-2" />
+                      <ArrowOutward className="w-4 h-4 ml-2" />
                       {/* <img src={iconLink} alt="link" className="ml-2 w-8 h-8" /> */}
                     </p>
                   </div>
@@ -69,7 +73,7 @@ const ProjectDetails = ({ whiteMode }) => {
                   <section className="mt-2 w-full flex py-4 items-start justify-start flex-wrap">
                     {d?.skills?.map((d, i) => {
                       return (
-                        <p
+                        <div
                           key={i}
                           className={`px-2 py-1 my-1 mr-2 w-max rounded-[33px] border-[1px] flex items-center justify-center
                         border-gray-700
@@ -86,7 +90,7 @@ const ProjectDetails = ({ whiteMode }) => {
                           <span className="px-2 font-caveat text-lg font-semibold">
                             {d?.name}
                           </span>
-                        </p>
+                        </div>
                       );
                     })}
                   </section>
@@ -122,40 +126,55 @@ const ProjectDetails = ({ whiteMode }) => {
         <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mb-20">
           {moreProjects?.map((d, i) => {
             return (
-              <section className="flex flex-col items-start" key={i}>
-                <figure className={``}>
-                  <img
-                    src={d?.image}
-                    alt="project"
-                    className="object-contain w-full h-[300px]"
-                  />
-                </figure>
-                <p className="py-1.5 !text-[#707070] text-lg">{d?.dec}</p>
-                <h3
-                  className={`py-1.5 font-bold text-caveat ${
-                    whiteMode ? "text-[#101010]" : "text-[#fff]"
-                  } !text-xl`}
-                >
-                  {d?.name}
-                </h3>
+              <figure
+                className={`cursor-pointer relative w-full rounded-xl`}
+                key={i}
+                onMouseEnter={() => {
+                  setState((prev) => {
+                    return { ...prev, selectedData: d };
+                  });
+                }}
+                onMouseLeave={() => {
+                  setState((prev) => {
+                    return { ...prev, selectedData: {} };
+                  });
+                }}
+              >
+                <img
+                  src={d?.image}
+                  alt="pic"
+                  className={`${
+                    state.selectedData?.id === d?.id ? "opacity-70" : ""
+                  } object-contain w-full h-full rounded-xl`}
+                />
 
-                <p
-                  className="py-1.5 flex items-start justify-center text-xl cursor-pointer group"
-                  onClick={() => {
-                    window.scroll({ top: 0, left: 0, behavior: "smooth" });
-                    navigate(`/project-details/${d?.slug}`);
-                  }}
-                >
-                  <span
-                    className={`group-hover:underline font-semibold 
-                    ${whiteMode ? "text-[#525155]" : "text-[#D1D1D1]"}
-                    `}
-                  >
-                    See My Work
-                  </span>
-                  <img src={iconLink} alt="link" className="ml-2 w-8 h-8" />
-                </p>
-              </section>
+                {state.selectedData?.id === d?.id && (
+                  <>
+                    <p className="absolute bottom-0 w-full flex flex-col rounded-xl bg-gradient-to-t from-black to-transparent duration-500 p-4 ">
+                      <span className="py-0.5 md:py-1 text-lg lg:text-2xl bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent font-bold">
+                        {d?.name}
+                      </span>
+
+                      <span className="py-0.5 md:py-1 text-base text-[#fff] font-semibold">
+                        {d?.dec}
+                      </span>
+                      <span className="py-0.5 md:py-1 text-sm text-babyGreen font-semibold">
+                        {d?.date}
+                      </span>
+                    </p>
+                    <p
+                      className="absolute top-3 right-5 w-fit bg-babyGreen rounded-full p-1.5 cursor-pointer"
+                      onClick={() => {
+                        window.scroll({ top: 0, left: 0, behavior: "smooth" });
+                        navigate(`/project-details/${d?.slug}`);
+                      }}
+                    >
+                      <ArrowForward />
+                      {/* <img src={iconLink} alt="link" className="ml-2 w-8 h-8" /> */}
+                    </p>
+                  </>
+                )}
+              </figure>
             );
           })}
         </section>

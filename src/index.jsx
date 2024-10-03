@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Footer from "./Common/Footer";
-import Header from "./Common/HeaderP";
+import Header from "./Common/Header";
 import AllRoutes from "./routes";
 
 const Index = () => {

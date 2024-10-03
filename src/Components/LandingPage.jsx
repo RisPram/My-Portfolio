@@ -90,7 +90,7 @@ const LandingPage = ({ whiteMode }) => {
 
       <Container whiteMode={whiteMode} inner="my-14">
         <section
-          className={`py-5 flex flex-col md:flex-row items-center justify-center text-lg lg:text-2xl tracking-wide  ${
+          className={`py-5 flex flex-col md:flex-row items-center justify-center text-base md:text-lg lg:text-2xl tracking-wide  ${
             whiteMode ? "text-black" : "text-[#fff]"
           } font-semibold `}
         >

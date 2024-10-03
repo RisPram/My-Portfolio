@@ -35,12 +35,7 @@ const AboutMe = ({ whiteMode }) => {
               user-friendly solutions.{`\n\n`} My focus is on building
               applications that are not only functional and intuitive but also
               visually appealing and engaging. I bring a personal touch to every
-              projectI'm a Frontend Engineer from Bangalore, India, specializing
-              in creating dynamic and responsive web applications. I thrive on
-              transforming complex challenges into sleek, efficient, and
-              user-friendly solutions. My focus is on building applications that
-              are not only functional and intuitive but also visually appealing
-              and engaging. I bring a personal touch to every project.
+              project.
             </p>
 
             <section className="w-full flex py-4 items-start justify-center lg:justify-between flex-wrap">

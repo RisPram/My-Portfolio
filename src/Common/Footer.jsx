@@ -22,7 +22,7 @@ const Footer = ({ whiteMode }) => {
           <p className="text-center py-2 text-2xl text-[#989898] font-libre">
             Let’s Build Something Together
           </p>
-          <p className="text-center py-4 cursor-pointer">
+          <p className="text-center py-2 lg:py-4 cursor-pointer">
             <a
               href={`mailto: rishita.pramanick15@gmail.com`}
               data-rel="external"
@@ -49,7 +49,7 @@ const Footer = ({ whiteMode }) => {
             })}
           </div>
           <p
-            className={`text-center text-base md:text-xl pt-8 pb-2 ${
+            className={`text-center text-base md:text-xl pt-2 lg:pt-8 pb-2 ${
               whiteMode ? "text-black" : "text-[#707070]"
             }`}
           >

@@ -17,6 +17,7 @@ import {
   cashaqua,
   offerzone,
   loan,
+  career,
 } from "./Assets";
 export const menu = [
   {
@@ -257,6 +258,56 @@ export const myProject = [
       },
     ],
     details: [
+      "Developed a business opportunity for a business person named <b>“CashAqua”.</b> It is a packaged drinking water bottle brand Just like Kinlay, Bisleri, or Aquafina. The word CashAqua consists of two words <b>“Cash”</b> used for Cashback and <b>“Aqua”</b> used for Water this means cashback on water. It has launched with the tagline <b>“Pani Pe Petrol Ka Cashback”.</b>",
+      "Built a responsive UI using <strong> React, Tailwind, and integrated Google APIs <strong> for location.",
+      "Implemented <b>skeleton loading (shimmer effects)</b> and <b>infinite scrolling </b> to enhance user experience when handling large data sets.",
+      "Utilized <b> React Router </b> for navigation, optimizing performance through <b>lazy loading</b> techniques.",
+    ],
+  },
+  {
+    id: "mpr6",
+    slug: "career",
+    name: "Footer section",
+    date: "Oct, 2023 - Nov, 2023",
+    dec: "Wide openings",
+    image: career,
+    liveLink: "https://globalgarner.com/career",
+    skills: [
+      {
+        id: "skill1",
+        name: "HTML",
+        image: html,
+      },
+      {
+        id: "skill2",
+        name: "CSS",
+        image: css,
+      },
+
+      {
+        id: "skill5",
+        name: "Tailwind CSS",
+        image: tailwind,
+      },
+      {
+        id: "skill6",
+        name: "JavaScript",
+        image: js,
+      },
+      {
+        id: "skill7",
+        name: "React Js",
+        image: reactjs,
+      },
+
+      {
+        id: "skill10",
+        name: "Git",
+        image: git,
+      },
+    ],
+    details: [
+      "Process your loans through Global Garner for a seamless and efficient experience,Ensuring diverse loan options to suit your needs",
       "Developed a business opportunity for a business person named <b>“CashAqua”.</b> It is a packaged drinking water bottle brand Just like Kinlay, Bisleri, or Aquafina. The word CashAqua consists of two words <b>“Cash”</b> used for Cashback and <b>“Aqua”</b> used for Water this means cashback on water. It has launched with the tagline <b>“Pani Pe Petrol Ka Cashback”.</b>",
       "Built a responsive UI using <strong> React, Tailwind, and integrated Google APIs <strong> for location.",
       "Implemented <b>skeleton loading (shimmer effects)</b> and <b>infinite scrolling </b> to enhance user experience when handling large data sets.",
