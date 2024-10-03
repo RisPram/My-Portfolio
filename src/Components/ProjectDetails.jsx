@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
-import { iconLink, bgEffectA } from "../Assets";
+import { iconLink, bgEffectA } from "../Common/Assets";
 import Container from "../Common/Container";
 import { myProject } from "../Common/RealData";
 import ScrollToTopOfPage from "../Common/ScrollToTopOfPage";

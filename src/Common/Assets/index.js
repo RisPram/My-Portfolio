@@ -30,7 +30,7 @@ import homepageC from "./images/AboutMe/ResearchandDevelopment.png";
 import bgEffectA from "./images/AboutMe/bgEffect.png";
 
 // resume
-import resume from "../Assets/samplepdf.pdf";
+import resume from "./samplepdf.pdf";
 
 // skills
 import html from "./images/Skills/html5.svg";
