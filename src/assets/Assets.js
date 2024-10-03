@@ -3,7 +3,7 @@ import darkMode from "./images/darkMode.png";
 import day from "./images/Day.svg";
 import night from "./images/Night.svg";
 import hamburger from "./images/HamburgerMenu.svg";
-import rplogo from "./images/AboutMe/RPlogo.svg";
+import logoProject from "./images/AboutMe/RPlogo.svg";
 // import logo from "./images/logo.png";
 import logo from "./images/logoB.png";
 import myProject1 from "./images/myProject1.png";
@@ -71,7 +71,7 @@ export {
   day,
   night,
   hamburger,
-  rplogo,
+  logoProject,
   whiteMode,
   darkMode,
   logo,

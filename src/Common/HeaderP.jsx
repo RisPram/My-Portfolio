@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { day, night, hamburger, rplogo } from "../Assets/Assets";
+import { day, night, hamburger, logoProject } from "../Assets/Assets";
 import { Close } from "@mui/icons-material";
 import Container from "./Container";
 import { menu } from "./RealData";
@@ -46,7 +46,7 @@ const Header = ({ handleModeChange }) => {
       <nav className="flex w-full h-full">
         <figure className="w-[10%] flex items-start">
           <img
-            src={rplogo}
+            src={logoProject}
             alt="logo"
             className="object-contain w-14 h-14 cursor-pointer"
             onClick={() => {
