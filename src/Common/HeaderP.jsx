@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { day, night, hamburger, logoProject } from "../Assets/Assets";
+import { day, night, hamburger, logoProject } from "../Assets";
 import { Close } from "@mui/icons-material";
 import Container from "./Container";
 import { menu } from "./RealData";

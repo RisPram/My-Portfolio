@@ -1,6 +1,6 @@
 import { useState } from "react";
 // import SegmentHeading from "../Common/SegmentHeading";
-import { send } from "../Assets/Assets";
+import { send } from "../Assets";
 import axios from "axios";
 import Container from "../Common/Container";
 

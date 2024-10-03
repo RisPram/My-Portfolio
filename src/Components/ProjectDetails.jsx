@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
-import { iconLink, bgEffectA } from "../Assets/Assets";
+import { iconLink, bgEffectA } from "../Assets";
 import Container from "../Common/Container";
-import { myProject, skills } from "../Common/RealData";
+import { myProject } from "../Common/RealData";
 import ScrollToTopOfPage from "../Common/ScrollToTopOfPage";
 
 const ProjectDetails = ({ whiteMode }) => {
