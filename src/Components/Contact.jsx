@@ -140,7 +140,7 @@ const Contact = ({ whiteMode }) => {
                 </svg>
               </button>
             ) : (
-              <div className="relative flex items-center justify-center w-full mt-10 ms-auto">
+              <div className="relative flex items-center justify-center w-full mt-10 mb-5 ms-auto">
                 {state?.viewMessage ? (
                   <div className="absolute bg-forth text-babyGreen -top-[25px] text-xs px-2 py-[2px] flex items-center justify-center w-full rounded-md modal-animate-slide-up">
                     Message sent successfully!
@@ -150,16 +150,11 @@ const Contact = ({ whiteMode }) => {
                   onClick={open ? sendEmail : null}
                   className={`bg-babyGreen
                   ${
-                    open ? " cursor-pointer " : " cursor-not-allowed"
+                    open ? "cursor-pointer " : "cursor-not-allowed"
                   } py-[15px] px-[25px] rounded-xl flex items-center justify-center w-fit`}
                 >
                   <img src={send} className="object-contain w-4 h-4" />
-                  <span
-                    className={`text-sm font-bold  ms-3 
-                   `}
-                  >
-                    Send Message
-                  </span>
+                  <span className={`text-sm font-bold ms-3`}>Send Message</span>
                 </button>
               </div>
             )}

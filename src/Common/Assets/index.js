@@ -44,7 +44,7 @@ import git from "./images/Skills/git.png";
 import bootstrap from "./images/Skills/bootstrap.png";
 import nextjs from "./images/Skills/nextjs.webp";
 // company
-import gg from "./images/AboutMe/gg.png";
+import gg from "./images/AboutMe/gg.svg";
 import tcs from "./images/AboutMe/tcs.png";
 import send from "./images/AboutMe/send.png";
 export {

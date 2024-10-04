@@ -38,7 +38,7 @@ const LandingPage = ({ whiteMode }) => {
       <ScrollToTopOfPage />
       <Container
         whiteMode={whiteMode}
-        inner="mt-20 mb-8"
+        inner="mt-10 lg:mt-20 mb-8"
         style={{ backgroundImage: `url(${bgEffectA})` }}
       >
         <section
@@ -90,12 +90,12 @@ const LandingPage = ({ whiteMode }) => {
 
       <Container whiteMode={whiteMode} inner="my-14">
         <section
-          className={`py-5 flex flex-col md:flex-row items-center justify-center text-base md:text-lg lg:text-2xl tracking-wide  ${
+          className={`py-5 flex flex-row items-center justify-center text-sm md:text-lg lg:text-2xl tracking-wide  ${
             whiteMode ? "text-black" : "text-[#fff]"
           } font-semibold `}
         >
           <p
-            className={`flex items-center justify-center border-r-none lg:border-r-[1px]
+            className={`flex flex-col md:flex-row items-center justify-center border-r-[1px]
             ${
               whiteMode
                 ? "text-black border-black"
@@ -111,7 +111,7 @@ const LandingPage = ({ whiteMode }) => {
             />
           </p>
           <p
-            className={`flex items-center justify-center border-l-none lg:border-l-[1px] border-cyan-50  ${
+            className={`flex  flex-col md:flex-row items-center justify-center border-l-[1px] border-cyan-50  ${
               whiteMode ? "border-black" : "border-[#fff]"
             }`}
           >

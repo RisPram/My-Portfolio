@@ -31,23 +31,25 @@ const ProjectDetails = ({ whiteMode }) => {
                 className="my-10 w-[90%] lg:w-[70%] flex flex-col items-center justify-center"
                 key={i}
               >
-                <figure className="w-full h-[350px] md:h-[600px] pb-6">
+                <figure className="w-full h-[450px] md:h-[600px] pb-3 lg:pb-6 rounded-lg">
                   <img
                     src={d?.image}
-                    className="object-fill w-full h-full rounded-lg"
+                    className="object-fill md:object-fill w-full h-full rounded-lg"
                   />
                 </figure>
-                <section className="w-full flex">
+                <section className="w-full flex flex-col lg:flex-row">
                   <h3
-                    className={`w-[80%] py-6 !text-3xl lg:!text-4xl font-bold ${
+                    className={`w-full lg:w-[80%] py-6 !text-2xl lg:!text-4xl font-bold ${
                       whiteMode ? "text-[#101010]" : "text-[#fff]"
                     }`}
                   >
                     {d?.name}
                   </h3>
-                  <div className={`w-[20%] flex items-center justify-end`}>
+                  <div
+                    className={`w-full lg:w-[20%] flex items-start lg:items-center lg:justify-end`}
+                  >
                     <p
-                      className={`flex py-1.5 px-7 font-caveat text-lg cursor-pointer group  bg-blue-400 rounded-lg duration-200 hover:bg-blue-500
+                      className={`flex py-1.5 px-7 font-caveat text-base lg:text-lg cursor-pointer group  bg-blue-400 rounded-lg duration-200 hover:bg-blue-500
                         ${whiteMode ? "text-[#101010]" : "text-[#fff]"}`}
                       onClick={() => {
                         window.open(
@@ -119,7 +121,7 @@ const ProjectDetails = ({ whiteMode }) => {
         <h2
           className={`font-semibold ${
             whiteMode ? "text-[#101010]" : "text-[#fff]"
-          } !text-5xl my-16 pt-10`}
+          } !text-3xl lg:!text-5xl my-16 pt-10`}
         >
           More to explore
         </h2>

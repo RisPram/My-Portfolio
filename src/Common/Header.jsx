@@ -108,7 +108,7 @@ const Header = ({ handleModeChange }) => {
                 <img
                   src={hamburger}
                   alt="mode"
-                  className={`mx-2 duration-200 object-contain w-[30px] h-[30px] cursor-pointer ${
+                  className={`mx-2 duration-200 object-contain w-[42px] h-[42px] cursor-pointer ${
                     !state?.mode ? "bg-white" : "bg-transparent"
                   } rounded-full p-1.5`}
                 />
@@ -119,7 +119,7 @@ const Header = ({ handleModeChange }) => {
               <div
                 className={`${
                   state.mode ? "bg-[#fff]" : "bg-baseColor"
-                }  z-50 w-[90vw] h-[400px] rounded-md py-2 px-1 absolute -top-7 right-0 flex flex-col menu-animate-slide-topBottom`}
+                } z-50 w-[90vw] h-[400px] rounded-b-md py-2 px-1 absolute -top-11 right-0 flex flex-col menu-animate-slide-topBottom`}
               >
                 <p className="flex items-end justify-end w-full py-2">
                   <Close
