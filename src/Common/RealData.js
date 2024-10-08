@@ -1,7 +1,7 @@
 import {
   linkedIn,
   twitter,
-  resume,
+  // resume,
   html,
   css,
   js,
@@ -39,7 +39,8 @@ export const menu = [
   {
     id: "menuD",
     title: "Resume",
-    download: resume,
+    download:
+      "https://drive.google.com/file/d/15jsh4SGoGmCxZ94mh1RpmXCoRTXa9uoi/view",
   },
 ];
 export const skills = [

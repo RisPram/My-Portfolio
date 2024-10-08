@@ -16,18 +16,26 @@ const Container = ({ whiteMode, outer, inner, children, segment, style }) => {
     };
   }, []);
 
+  // ${
+  //   segment === "header" && scrollPosition >= 20
+  //     ? "bg-transparent backdrop-blur-sm"
+  //     : whiteMode
+  //     ? "bg-whiteMode"
+  //     : "bg-baseColor"
+  // }
   return (
     <section
-      className={`relative w-full flex items-center justify-center bg-cover bg-center   ${
+      className={`relative w-full flex items-center justify-center bg-cover bg-center ${
         outer ?? ""
       } ${segment === "header" ? "sticky top-0 z-50" : ""}
+       ${whiteMode ? "bg-whiteMode" : "bg-baseColor"}
       ${
-        segment === "header" && scrollPosition >= 50
-          ? "bg-transparent backdrop-blur-sm"
-          : whiteMode
-          ? "bg-whiteMode"
-          : "bg-baseColor backdrop-blur-none"
-      } duration-300 `}
+        segment === "header" && scrollPosition >= 20
+          ? "!bg-transparent backdrop-blur-sm bg-opacity-50"
+          : ""
+      }
+     
+       `}
       style={style}
     >
       <section

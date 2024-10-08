@@ -163,10 +163,10 @@ const Header = ({ handleModeChange }) => {
                       state.mode ? "text-baseColor" : "text-[#fff]"
                     } my-1 py-2  rounded-[30px] duration-300 cursor-pointer text-lg font-bold`}
                   >
-                    {state?.mode ? "Light Mode" : "Dark Mode"}
+                    {!state?.mode ? "Light Mode" : "Dark Mode"}
                   </figcaption>
                   <img
-                    src={state?.mode ? day : night}
+                    src={!state?.mode ? day : night}
                     alt="mode"
                     className={`mx-2 duration-200 object-contain w-[30px] h-[30px] cursor-pointer ${
                       !state?.mode ? "bg-white" : "bg-transparent"
