@@ -1,5 +1,6 @@
 import {
   linkedIn,
+  github,
   twitter,
   // resume,
   html,
@@ -140,14 +141,14 @@ export const socialMedia = [
   {
     id: "s1",
     icon: linkedIn,
-    link: "",
+    link: "https://www.linkedin.com/in/rishita-pramanick",
     name: "LinkedIn",
   },
   {
     id: "s2",
-    icon: twitter,
-    link: "",
-    name: "Twitter",
+    icon: github,
+    link: "https://github.com/RisPram",
+    name: "Github",
   },
 ];
 

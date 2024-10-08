@@ -11,6 +11,7 @@ import myProject3 from "./images/myProject3.png";
 import myProject4 from "./images/myProject4.png";
 import iconLink from "./images/iconLink.png";
 import linkedIn from "./images/linkedin.png";
+import github from "./images/github.svg";
 import twitter from "./images/twitter.png";
 //myproject images
 import cashaqua from "./images/ProjectDetails/cashaqua.png";
@@ -80,6 +81,7 @@ export {
   myProject4,
   iconLink,
   linkedIn,
+  github,
   twitter,
   pImg,
   homepageA,

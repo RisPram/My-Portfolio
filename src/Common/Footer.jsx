@@ -39,11 +39,12 @@ const Footer = ({ whiteMode }) => {
               return (
                 <figure
                   key={i}
-                  className={` ${
-                    whiteMode ? "bg-[#d1d1d1]" : "bg-[#5F5F5F]"
-                  } p-2  hover:bg-babyGreen cursor-pointer rounded-xl mr-2 flex items-center justify-center`}
+                  onClick={() => {
+                    window.open(`${d?.link}`, "_blank", "fullscreen=yes");
+                  }}
+                  className={` bg-[#f0f0f0] p-2 hover:bg-babyGreen cursor-pointer rounded-xl mr-2 flex items-center justify-center`}
                 >
-                  <img src={d?.icon} alt="smedia" className="mr-2 w-8 h-8" />
+                  <img src={d?.icon} alt="smedia" className="mx-1 w-8 h-8" />
                 </figure>
               );
             })}
