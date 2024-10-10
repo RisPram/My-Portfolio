@@ -47,13 +47,13 @@ const LandingPage = ({ whiteMode }) => {
           <section className="flex flex-col items-start justify-center">
             <h2
               className={`py-1 font-libre !text-lg md:!text-3xl ${
-                whiteMode ? "text-[#616161]" : "text-[#D1D1D1]"
+                whiteMode ? "text-[#616161]" : "text-[#fff]"
               }`}
             >
               Hi! I’m Rishita Pramanick.
             </h2>
-            <h4 className="py-1 text-[#707070] font-libre !text-lg md:!text-2xl">
-              Frontend Developer (React JS) .
+            <h4 className="py-1 text-[#989898] font-libre !text-lg md:!text-2xl">
+              Frontend Developer
             </h4>
             <p
               className={`py-5 text-4xl lg:text-5xl !leading-snug font-caveat ${
@@ -82,7 +82,7 @@ const LandingPage = ({ whiteMode }) => {
             <img
               src={mypicture}
               alt="person"
-              className="object-cover w-[75%] h-[75%] xl:w-full rounded-3xl"
+              className="object-cover w-[75%] h-[88%] xl:w-full rounded-3xl"
             />
           </figure>
         </section>

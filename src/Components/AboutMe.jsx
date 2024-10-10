@@ -9,16 +9,16 @@ const AboutMe = ({ whiteMode }) => {
       <ScrollToTopOfPage />
       <Container whiteMode={whiteMode} inner="my-10 lg:my-20">
         <section className="grid grid-cols-1 xl:grid-cols-2 gap-4 lg:gap-14 w-full">
-          <figure className="xl:bg-gray-100 w-full h-[300px] lg:h-[500px] rounded-lg flex items-start justify-start">
+          <figure className="xl:bg-gray-100 w-[80%] h-[300px] lg:h-[600px] rounded-lg flex items-start justify-start">
             <img
               src={mypicture}
               alt="person"
               className="object-contain w-full h-full rounded-lg"
             />
           </figure>
-          <section className="flex flex-col items-start">
+          <section className="flex flex-col items-start w-[95%]">
             <h2
-              className={`py-3 !text-3xl lg:!text-5xl font-bold ${
+              className={`py-3 !text-3xl lg:!text-4xl font-bold ${
                 whiteMode ? "text-[#101010]" : "text-[#fff]"
               }`}
             >
@@ -51,7 +51,7 @@ const AboutMe = ({ whiteMode }) => {
                         }
                         `}
                   >
-                    <figure key={i} className="w-[30px] h-[30px]">
+                    <figure key={i} className="w-[40px] h-[40px]">
                       <img
                         src={d?.image}
                         alt="skills"

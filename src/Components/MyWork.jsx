@@ -21,7 +21,7 @@ const MyProject = ({ whiteMode }) => {
         {myProject?.map((d, i) => {
           return (
             <figure
-              className={`cursor-pointer relative w-full rounded-xl`}
+              className={`cursor-pointer relative w-full h-[400px] rounded-xl`}
               key={i}
               onMouseEnter={() => {
                 setState((prev) => {
@@ -39,17 +39,17 @@ const MyProject = ({ whiteMode }) => {
                 alt="pic"
                 className={`${
                   state.selectedData?.id === d?.id ? "opacity-70" : ""
-                } object-contain w-full h-full rounded-xl`}
+                } object-cover w-full h-full rounded-2xl`}
               />
 
               {state.selectedData?.id === d?.id && (
                 <>
                   <p className="absolute bottom-0 w-full flex flex-col rounded-xl bg-gradient-to-t from-black to-transparent duration-500 p-4 ">
-                    <span className="py-0.5 md:py-1 text-lg lg:text-2xl bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent font-bold">
+                    <span className="py-0.5 md:py-1 text-lg lg:text-3xl bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent font-bold">
                       {d?.name}
                     </span>
 
-                    <span className="py-0.5 md:py-1 text-base text-[#fff] font-semibold">
+                    <span className="py-0.5 md:py-1 text-lg text-[#fff] font-semibold">
                       {d?.dec}
                     </span>
                     <span className="py-0.5 md:py-1 text-sm text-babyGreen font-semibold">

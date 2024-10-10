@@ -82,13 +82,13 @@ const Contact = ({ whiteMode }) => {
     <>
       <Container whiteMode={whiteMode} inner="my-10 lg:my-20">
         <section
-          className={` bg-[#0d052b] p-3 lg:p-6 w-[95%] lg:w-[50%] mx-auto
-        rounded-xl border-[1px] ${
-          whiteMode ? "border-[#101010]" : "border-[#fff]"
+          className={` bg-[#fff] p-3 lg:p-8 w-[95%] lg:w-[40%] mx-auto
+        rounded-2xl border-[2px] ${
+          whiteMode ? "border-[#000] shadow" : "border-[#808080]"
         }}
           `}
         >
-          <p className={`my-5 text-xl font-bold  text-[#fff] `}>
+          <p className={`my-8 text-2xl font-bold`}>
             Your questions and opportunities are just a message away.
           </p>
 
@@ -99,9 +99,8 @@ const Contact = ({ whiteMode }) => {
               value={formData.from_name}
               onChange={handleChange}
               placeholder="Full name"
-              className={`font-semibold py-[15px] px-[20px] text-sm rounded-xl bg-gray-200 w-full ${
-                whiteMode ? "text-[#101010]" : "text-[#fff]"
-              }`}
+              className={`font-semibold py-[20px] px-[20px] text-sm rounded-xl text-black bg-gray-100 w-full 
+               `}
             />
             <input
               type="email"
@@ -109,9 +108,9 @@ const Contact = ({ whiteMode }) => {
               value={formData.from_email}
               onChange={handleChange}
               placeholder="Email address"
-              className={`font-semibold py-[15px] px-[20px] text-sm rounded-xl bg-gray-200 w-full ${
-                whiteMode ? "text-[#101010]" : "text-[#fff]"
-              }`}
+              className={`font-semibold py-[20px] px-[20px] text-sm rounded-xl text-black bg-gray-100 w-full
+               
+              `}
             />
 
             <textarea
@@ -120,13 +119,13 @@ const Contact = ({ whiteMode }) => {
               value={formData.message}
               onChange={handleChange}
               placeholder="Message"
-              className={`w-full font-semibold py-[15px] px-[20px] bg-gray-200 text-sm rounded-xl ${
-                whiteMode ? "text-[#101010]" : "text-[#fff]"
-              } `}
+              className={`w-full font-semibold py-[20px] px-[20px] text-sm rounded-xl text-black bg-gray-100
+                
+               `}
             />
             {load ? (
               <button
-                className={`py-[15px] px-[20px] bg-gray-100 rounded-xl flex items-center justify-center mt-5 ms-auto w-full`}
+                className={`py-[20px] px-[20px] bg-gray-100 rounded-xl flex items-center justify-center mt-5 ms-auto w-full`}
               >
                 <svg
                   width="20"
@@ -142,7 +141,7 @@ const Contact = ({ whiteMode }) => {
             ) : (
               <div className="relative flex items-center justify-center w-full mt-10 mb-5 ms-auto">
                 {state?.viewMessage ? (
-                  <div className="absolute bg-forth text-babyGreen -top-[25px] text-xs px-2 py-[2px] flex items-center justify-center w-full rounded-md modal-animate-slide-up">
+                  <div className="absolute bg-forth text-green-500 -top-[25px] text-sm px-2 py-[2px] flex items-center justify-center w-full rounded-md modal-animate-slide-up">
                     Message sent successfully!
                   </div>
                 ) : null}
@@ -151,10 +150,11 @@ const Contact = ({ whiteMode }) => {
                   className={`bg-babyGreen
                   ${
                     open ? "cursor-pointer " : "cursor-not-allowed"
-                  } py-[15px] px-[25px] rounded-xl flex items-center justify-center w-fit`}
+                  } py-[15px] px-[25px] rounded-xl flex items-center justify-center w-[100%]`}
                 >
-                  <img src={send} className="object-contain w-4 h-4" />
-                  <span className={`text-sm font-bold ms-3`}>Send Message</span>
+                  <span className={`text-base font-bold ms-3`}>
+                    Get in touch
+                  </span>
                 </button>
               </div>
             )}
