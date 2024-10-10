@@ -9,11 +9,11 @@ const AboutMe = ({ whiteMode }) => {
       <ScrollToTopOfPage />
       <Container whiteMode={whiteMode} inner="my-10 lg:my-20">
         <section className="grid grid-cols-1 xl:grid-cols-2 gap-4 lg:gap-14 w-full">
-          <figure className="xl:bg-gray-100 w-[80%] h-[300px] lg:h-[600px] rounded-lg flex items-start justify-start">
+          <figure className="bg-gray-100 w-full h-[300px] lg:h-[600px] rounded-xl flex items-center justify-center">
             <img
               src={mypicture}
               alt="person"
-              className="object-contain w-full h-full rounded-lg"
+              className="object-scale-down w-[90%] h-full rounded-xl"
             />
           </figure>
           <section className="flex flex-col items-start w-[95%]">
@@ -38,12 +38,12 @@ const AboutMe = ({ whiteMode }) => {
               project.
             </p>
 
-            <section className="w-full flex py-4 items-start justify-center lg:justify-between flex-wrap">
+            <section className="w-full flex py-4 items-start justify-start flex-wrap">
               {skills?.map((d, i) => {
                 return (
                   <p
                     key={i}
-                    className={`px-2 py-1 mx-1 lg:mx-0 my-1 w-max rounded-xl border-[1px] flex items-center justify-center
+                    className={`px-2 py-1 mr-2 lg:mr-4 my-1.5 w-max rounded-xl border-[1px] flex items-center justify-center
                         ${
                           whiteMode
                             ? "text-[#fff] border-gray-300"

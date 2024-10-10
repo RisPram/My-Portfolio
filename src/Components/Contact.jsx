@@ -99,7 +99,7 @@ const Contact = ({ whiteMode }) => {
               value={formData.from_name}
               onChange={handleChange}
               placeholder="Full name"
-              className={`font-semibold py-[20px] px-[20px] text-sm rounded-xl text-black bg-gray-100 w-full 
+              className={`font-semibold py-[20px] px-[20px] text-sm rounded-xl text-black bg-gray-100 w-full outline-none 
                `}
             />
             <input
@@ -108,7 +108,7 @@ const Contact = ({ whiteMode }) => {
               value={formData.from_email}
               onChange={handleChange}
               placeholder="Email address"
-              className={`font-semibold py-[20px] px-[20px] text-sm rounded-xl text-black bg-gray-100 w-full
+              className={`font-semibold py-[20px] px-[20px] text-sm rounded-xl text-black bg-gray-100 w-full outline-none
                
               `}
             />
@@ -119,7 +119,7 @@ const Contact = ({ whiteMode }) => {
               value={formData.message}
               onChange={handleChange}
               placeholder="Message"
-              className={`w-full font-semibold py-[20px] px-[20px] text-sm rounded-xl text-black bg-gray-100
+              className={`w-full font-semibold py-[20px] px-[20px] text-sm rounded-xl text-black bg-gray-100 outline-none
                 
                `}
             />
