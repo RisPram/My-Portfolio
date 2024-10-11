@@ -42,7 +42,7 @@ const LandingPage = ({ whiteMode }) => {
         style={{ backgroundImage: `url(${bgEffectA})` }}
       >
         <section
-          className={`grid grid-cols-1 xl:grid-cols-[60%_30%] gap-6 xl:gap-[10%]`}
+          className={`grid grid-cols-1 xl:grid-cols-[60%_30%] gap-6 xl:gap-[10%] mt-20`}
         >
           <section className="flex flex-col items-start justify-center">
             <h2

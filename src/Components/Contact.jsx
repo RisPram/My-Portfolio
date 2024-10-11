@@ -82,13 +82,13 @@ const Contact = ({ whiteMode }) => {
     <>
       <Container whiteMode={whiteMode} inner="my-10 lg:my-20">
         <section
-          className={` bg-[#fff] p-3 lg:p-8 w-[95%] lg:w-[40%] mx-auto
+          className={`bg-[#fff] p-3 lg:p-8 w-[95%] lg:w-[40%] mx-auto mt-20
         rounded-2xl border-[2px] ${
           whiteMode ? "border-[#000] shadow" : "border-[#808080]"
         }}
           `}
         >
-          <p className={`my-8 text-2xl font-bold`}>
+          <p className={`my-8 text-xl md:text-2xl font-bold`}>
             Your questions and opportunities are just a message away.
           </p>
 
