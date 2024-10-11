@@ -8,7 +8,7 @@ const AboutMe = ({ whiteMode }) => {
     <>
       <ScrollToTopOfPage />
       <Container whiteMode={whiteMode} inner="my-10 lg:my-20">
-        <section className="grid grid-cols-1 xl:grid-cols-2 gap-4 lg:gap-14 w-full">
+        <section className="grid grid-cols-1 xl:grid-cols-2 gap-4 lg:gap-14 w-full mt-20">
           <figure className="bg-gray-100 w-full h-[300px] lg:h-[600px] rounded-xl flex items-center justify-center">
             <img
               src={mypicture}

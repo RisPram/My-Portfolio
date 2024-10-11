@@ -31,5 +31,5 @@
 
 ## Screenshots
 
-![About Page Screenshot](https://github.com/RisPram/My-Portfolio/blob/main/src/Common/Assets/AboutMe/projectimageA.png)
-![Resume Page Screenshot](https://github.com/RisPram/My-Portfolio/blob/main/src/Common/Assets/AboutMe/projectimageB.png)
+![About Page Screenshot](https://github.com/RisPram/My-Portfolio/blob/main/src/Common/Assets/images/AboutMe/projectimageA.png)
+![Resume Page Screenshot](https://github.com/RisPram/My-Portfolio/blob/main/src/Common/Assets/images/AboutMe/projectimageB.png)
