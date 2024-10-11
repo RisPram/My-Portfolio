@@ -67,7 +67,7 @@ const LandingPage = ({ whiteMode }) => {
             <section className="w-[100%] flex items-center justify-center sm:justify-between py-8 flex-wrap ">
               {skills?.map((d, i) => {
                 return (
-                  <figure key={i} className="w-[60px] h-[60px] my-2">
+                  <figure key={i} className="w-[60px] h-[60px] my-2 mr-1.5">
                     <img
                       src={d?.image}
                       alt="skills"

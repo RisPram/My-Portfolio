@@ -64,7 +64,7 @@ const Header = ({ handleModeChange }) => {
          state.mode ? "bg-[#ffffffa3]" : "bg-[#0c0c0ca3]"
        } duration-300`}
     >
-      <section className={`w-[90%] lg:w-[70%] flex flex-col bg-transparent`}>
+      <section className={`w-[90%] lg:w-[75%] flex flex-col bg-transparent`}>
         <nav
           className={`flex w-full h-full ${
             state.scrollPosition > 100 ? "justify-center" : "xl:justify-end"
