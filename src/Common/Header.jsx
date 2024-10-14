@@ -97,7 +97,11 @@ const Header = ({ handleModeChange }) => {
           >
             {/* menu */}
             <section
-              className={`w-max bg-[#3a3939]/30 p-2 rounded-[30px] backdrop-blur-sm flex items-center justify-end`}
+              className={`w-max ${
+                state?.mode
+                  ? "rounded-[30px] backdrop-blur-sm bg-[#3a3939]/20"
+                  : ""
+              } p-2 flex items-center justify-end`}
             >
               {menu?.map((d, i) => {
                 return (
@@ -124,9 +128,9 @@ const Header = ({ handleModeChange }) => {
               } flex items-center justify-center`}
             >
               <img
-                src={state?.mode ? day : night}
+                src={!state?.mode ? day : night}
                 alt="mode"
-                className="duration-200 object-contain w-[40px] h-[40px] cursor-pointer bg-white rounded-full p-1.5"
+                className="duration-200 object-contain w-[25px] h-[25px] cursor-pointer"
                 onClick={() => {
                   handleModeChange(!state.mode);
                   setState((prev) => {
@@ -210,14 +214,12 @@ const Header = ({ handleModeChange }) => {
                         state.mode ? "text-baseColor" : "text-[#fff]"
                       } my-1 py-2  rounded-[30px] duration-300 cursor-pointer text-lg font-bold`}
                     >
-                      {state?.mode ? "Light Mode" : "Dark Mode"}
+                      {!state?.mode ? "Light Mode" : "Dark Mode"}
                     </figcaption>
                     <img
-                      src={state?.mode ? day : night}
+                      src={!state?.mode ? day : night}
                       alt="mode"
-                      className={`mx-2 duration-200 object-contain w-[30px] h-[30px] cursor-pointer ${
-                        !state?.mode ? "bg-white" : "bg-transparent"
-                      } rounded-full p-1.5`}
+                      className={`mx-2 duration-200 object-contain w-[25px] h-[25px] cursor-pointer `}
                     />
                   </figure>
                 </div>
