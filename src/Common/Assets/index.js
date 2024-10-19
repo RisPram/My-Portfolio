@@ -1,7 +1,5 @@
-import whiteMode from "./images/whiteMode.png";
-import darkMode from "./images/darkMode.png";
-import day from "./images/Sun_white.svg";
-import night from "./images/Moon_Black.svg";
+import day from "./images/sun.svg";
+import night from "./images/moon.svg";
 import hamburger from "./images/HamburgerMenu.svg";
 import logoProject from "./images/AboutMe/RPlogo.svg";
 import logo from "./images/logoB.png";
@@ -72,8 +70,6 @@ export {
   night,
   hamburger,
   logoProject,
-  whiteMode,
-  darkMode,
   logo,
   myProject1,
   myProject2,
