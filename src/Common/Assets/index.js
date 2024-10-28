@@ -28,9 +28,6 @@ import homepageB from "./images/AboutMe/UXandProductDesign.png";
 import homepageC from "./images/AboutMe/ResearchandDevelopment.png";
 import bgEffectA from "./images/AboutMe/bgEffect.png";
 
-// resume
-import resume from "./samplepdf.pdf";
-
 // skills
 import html from "./images/Skills/html5.svg";
 import css from "./images/Skills/css.svg";
@@ -84,6 +81,5 @@ export {
   homepageB,
   homepageC,
   bgEffectA,
-  resume,
   career,
 };

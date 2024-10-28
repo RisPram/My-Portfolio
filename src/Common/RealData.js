@@ -41,7 +41,7 @@ export const menu = [
     id: "menuD",
     title: "Resume",
     download:
-      "https://drive.google.com/file/d/15jsh4SGoGmCxZ94mh1RpmXCoRTXa9uoi/view",
+      "https://drive.google.com/file/d/13oNDC2jlamVLECKRd5V73QGklwKs-9Ab/view?usp=drive_link",
   },
 ];
 export const skills = [
