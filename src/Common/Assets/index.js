@@ -15,6 +15,7 @@ import twitter from "./images/twitter.png";
 import cashaqua from "./images/ProjectDetails/cashaqua.png";
 import franchiselanding from "./images/ProjectDetails/franchiselanding.png";
 import franchiseStore from "./images/ProjectDetails/franchiseStore.png";
+import ecommerce from "./images/ProjectDetails/ecommerce.jpeg";
 import loan from "./images/ProjectDetails/loan.png";
 import offerzone from "./images/ProjectDetails/offerzone.png";
 import career from "./images/ProjectDetails/career.png";
@@ -23,6 +24,7 @@ import pImg from "./images/ProjectDetails/problemImage.png";
 
 //homepage about me
 import mypicture from "./images/AboutMe/mypic.png";
+import mynewpic from "./images/AboutMe/mynewpic.jpeg";
 import homepageA from "./images/AboutMe/homepageA.png";
 import homepageB from "./images/AboutMe/UXandProductDesign.png";
 import homepageC from "./images/AboutMe/ResearchandDevelopment.png";
@@ -45,12 +47,12 @@ import tcs from "./images/AboutMe/tcs.png";
 import send from "./images/AboutMe/send.png";
 export {
   send,
-  franchiseStore,
+  franchiseStore,ecommerce,
   franchiselanding,
   cashaqua,
   offerzone,
   loan,
-  mypicture,
+  mypicture,mynewpic,
   gg,
   tcs,
   html,

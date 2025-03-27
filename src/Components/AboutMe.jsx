@@ -1,4 +1,4 @@
-import { mypicture } from "../Common/Assets";
+import { mypicture,mynewpic } from "../Common/Assets";
 import Container from "../Common/Container";
 import { skills } from "../Common/RealData";
 import ScrollToTopOfPage from "../Common/ScrollToTopOfPage";
@@ -11,7 +11,7 @@ const AboutMe = ({ whiteMode }) => {
         <section className="grid grid-cols-1 xl:grid-cols-2 gap-4 lg:gap-14 w-full mt-20">
           <figure className="bg-gray-100 w-full h-[300px] lg:h-[600px] rounded-xl flex items-center justify-center">
             <img
-              src={mypicture}
+              src={mynewpic}
               alt="person"
               className="object-scale-down w-[90%] h-full rounded-xl"
             />

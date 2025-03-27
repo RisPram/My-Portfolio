@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import {
-  mypicture,
+  mypicture,mynewpic,
   homepageA,
   bgEffectA,
   homepageB,
@@ -80,7 +80,7 @@ const LandingPage = ({ whiteMode }) => {
           </section>
           <figure className=" w-full h-full flex items-center lg:items-start justify-center rounded-2xl p-4">
             <img
-              src={mypicture}
+              src={mynewpic}
               alt="person"
               className="object-cover w-[75%] h-[88%] xl:w-full rounded-3xl"
             />

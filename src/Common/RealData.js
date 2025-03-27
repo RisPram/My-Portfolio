@@ -13,7 +13,7 @@ import {
   git,
   redux,
   nextjs,
-  franchiseStore,
+  franchiseStore,ecommerce,
   franchiselanding,
   cashaqua,
   offerzone,
@@ -41,8 +41,8 @@ export const menu = [
     id: "menuD",
     title: "Resume",
     download:
-      "https://drive.google.com/file/d/13oNDC2jlamVLECKRd5V73QGklwKs-9Ab/view?usp=drive_link",
-  },
+    "https://drive.google.com/file/d/1hotClN9hUBQ_LggbWtlRGR8F7n52RLdG/view?usp=drive_link"
+  }
 ];
 export const skills = [
   {
@@ -367,11 +367,11 @@ export const myProject = [
   {
     id: "mpr4",
     slug: "franchise-store",
-    name: "Franchise store Website",
+    name: "Franchise E-Commmerce Website",
     dec: "Shopping franchise website",
     date: "June, 2024 - present",
-    image: franchiseStore,
-    liveLink: "https://builder360-staging.web.app/store",
+    image: ecommerce,
+    liveLink: "https://nirvana.globalgarner.org/",
     skills: [
       {
         id: "skill1",
