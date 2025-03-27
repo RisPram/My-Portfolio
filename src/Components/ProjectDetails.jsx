@@ -28,7 +28,7 @@ const ProjectDetails = ({ whiteMode }) => {
           {specificProject?.map((d, i) => {
             return (
               <section
-                className="my-10 w-[90%] lg:w-[70%] flex flex-col items-center justify-center"
+                className="my-32 md:my-22 w-[90%] lg:w-[70%] flex flex-col items-center justify-center"
                 key={i}
               >
                 <figure className="w-full h-[450px] md:h-[600px] pb-3 lg:pb-6 rounded-2xl">

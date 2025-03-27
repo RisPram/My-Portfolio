@@ -42,7 +42,7 @@ const LandingPage = ({ whiteMode }) => {
         style={{ backgroundImage: `url(${bgEffectA})` }}
       >
         <section
-          className={`grid grid-cols-1 xl:grid-cols-[60%_30%] gap-6 xl:gap-[10%] mt-20`}
+          className={`grid grid-cols-1 lg:grid-cols-[50%_40%] xl:grid-cols-[60%_30%] gap-6 xl:gap-[10%] mt-20`}
         >
           <section className="flex flex-col items-start justify-center">
             <h2
@@ -82,13 +82,13 @@ const LandingPage = ({ whiteMode }) => {
             <img
               src={mynewpic}
               alt="person"
-              className="object-cover w-[75%] h-[88%] xl:w-full rounded-3xl"
+              className="object-cover md:object-contain xl:object-cover h-[88%] w-full rounded-3xl"
             />
           </figure>
         </section>
       </Container>
 
-      <Container whiteMode={whiteMode} inner="my-14">
+      <Container whiteMode={whiteMode} inner="my-6 md:my-14">
         <section
           className={`py-5 flex flex-row items-center justify-center text-sm md:text-lg lg:text-2xl tracking-wide  ${
             whiteMode ? "text-black" : "text-[#fff]"
