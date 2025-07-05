@@ -41,8 +41,10 @@ export const menu = [
     id: "menuD",
     title: "Resume",
     download:
-    "https://drive.google.com/file/d/1hotClN9hUBQ_LggbWtlRGR8F7n52RLdG/view?usp=drive_link"
+    "https://drive.google.com/file/d/1wBrqbjpA_sLZ5J3oBNb5KUI0CTewJvbx/view?usp=sharing"
+    
   }
+  
 ];
 export const skills = [
   {
@@ -371,7 +373,7 @@ export const myProject = [
     dec: "Shopping franchise website",
     date: "June, 2024 - present",
     image: ecommerce,
-    liveLink: "https://nirvana.globalgarner.org/",
+    liveLink: "https://nirvana-ecommerce.globalgarner.org/",
     skills: [
       {
         id: "skill1",
