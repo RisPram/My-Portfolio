@@ -13,7 +13,8 @@ import {
   git,
   redux,
   nextjs,
-  franchiseStore,ecommerce,
+  franchiseStore,
+  ecommerce,
   franchiselanding,
   cashaqua,
   offerzone,
@@ -41,10 +42,8 @@ export const menu = [
     id: "menuD",
     title: "Resume",
     download:
-    "https://drive.google.com/file/d/1wBrqbjpA_sLZ5J3oBNb5KUI0CTewJvbx/view?usp=sharing"
-    
-  }
-  
+      "https://drive.google.com/file/d/10xTO4f9Z2qHezwDaYRUBuBtH2y3F_S5B/view?usp=sharing",
+  },
 ];
 export const skills = [
   {
