@@ -42,7 +42,7 @@ export const menu = [
     id: "menuD",
     title: "Resume",
     download:
-      "https://drive.google.com/file/d/10xTO4f9Z2qHezwDaYRUBuBtH2y3F_S5B/view?usp=sharing",
+      "https://drive.google.com/file/d/1yRT9dw9KjZzveO0sAl4d2HbepflRfjA8/view?usp=sharing",
   },
 ];
 export const skills = [
