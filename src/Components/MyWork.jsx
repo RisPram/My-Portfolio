@@ -21,7 +21,7 @@ const MyProject = ({ whiteMode }) => {
         {myProject?.map((d, i) => {
           return (
             <figure
-              className={`cursor-pointer relative w-full h-[400px] rounded-xl`}
+              className={`relative w-full h-[400px] rounded-xl`}
               key={i}
               onMouseEnter={() => {
                 setState((prev) => {
@@ -57,7 +57,7 @@ const MyProject = ({ whiteMode }) => {
                     </span>
                   </p>
                   <p
-                    className="absolute top-3 right-5 w-fit bg-babyGreen rounded-full p-1.5 cursor-pointer"
+                    className="absolute top-3 right-5 w-fit bg-babyGreen rounded-full p-1.5 cursor-pointer animate-bounce"
                     onClick={() => {
                       navigate(`/project-details/${d?.slug}`);
                     }}

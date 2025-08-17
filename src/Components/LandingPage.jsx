@@ -103,7 +103,7 @@ const LandingPage = ({ whiteMode }) => {
             }
             `}
           >
-            Currently @{" "}
+           Ex -
             <img
               src={gg}
               alt="gg"
@@ -115,7 +115,7 @@ const LandingPage = ({ whiteMode }) => {
               whiteMode ? "border-black" : "border-[#fff]"
             }`}
           >
-            <span className="mx-4">Previously @</span>
+            <span className="mx-4">Ex -</span>
             <img
               src={tcs}
               alt="tcs"

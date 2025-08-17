@@ -41,7 +41,8 @@ export const menu = [
     id: "menuD",
     title: "Resume",
     download:
-    "https://drive.google.com/file/d/1wBrqbjpA_sLZ5J3oBNb5KUI0CTewJvbx/view?usp=sharing"
+    "https://drive.google.com/file/d/19t-Sj6E_SfcfF1nzIb5_r1ZZKr7ajU3M/view?usp=sharing"
+   
     
   }
   
@@ -159,7 +160,7 @@ export const myProject = [
     id: "mpr1",
     slug: "offer-zone",
     name: "User Web App",
-    date: "Jan,2023 - Present",
+    date: "Jan, 2023 - July, 204",
     dec: "Multi purpose e-commerce platform",
     image: offerzone,
     liveLink: "https://globalgarner.com/offer-zone",
@@ -371,7 +372,7 @@ export const myProject = [
     slug: "franchise-store",
     name: "Franchise E-Commmerce Website",
     dec: "Shopping franchise website",
-    date: "June, 2024 - present",
+    date: "June, 2024 - July, 2025",
     image: ecommerce,
     liveLink: "https://nirvana-ecommerce.globalgarner.org/",
     skills: [
@@ -425,7 +426,7 @@ export const myProject = [
     slug: "franchise-landing",
     name: "Franchise Website",
     dec: "Franchise website",
-    date: "June, 2024 - present",
+    date: "June, 2024 - July, 2025",
     image: franchiselanding,
     liveLink: "https://builder360-staging.web.app",
     skills: [
