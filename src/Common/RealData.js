@@ -42,9 +42,7 @@ export const menu = [
     id: "menuD",
     title: "Resume",
     download:
-    "https://drive.google.com/file/d/19t-Sj6E_SfcfF1nzIb5_r1ZZKr7ajU3M/view?usp=sharing"
-   
-    
+    "https://drive.google.com/file/d/1aO0W8SOtjC2N4uiHTA8UG1I2pTu2QRqK/view?usp=sharing"
   }
   
 ];
